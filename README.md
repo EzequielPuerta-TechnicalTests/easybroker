@@ -86,7 +86,7 @@ integration_partners: Resource = WrappedResource(
 
 It's a shame that IDE autocomplete doesn't show dynamically generated attributes, but it's nothing that with a little work of stub files it could not be achieve. An alternative could be to implement it with concrete classes, but there would be too many and they would all be too similar... So I chose this approach. The stub files stuff will be a future work.
 
-But, good news... Jupyter Notebooks can autocomplete methods after instantiate a dynamic classes! Check the next video, when I tried to got some autocompletition over the `partners` method, it didin't work until I run the code block and saved it at the `api` variable (the same happened with the `property_integration` method).
+But, good news... Jupyter Notebooks can autocomplete methods after instantiate a dynamic class! Check the next video, when I tried to got some autocompletition over the `partners` method, it didin't work until I run the code block and saved it at the `api` variable (the same happened with the `property_integration` method).
 
 ![Jupyter Notebooks](./misc/autocomplete.gif)
 
