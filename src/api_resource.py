@@ -11,7 +11,7 @@ class Resource:
     def url(self) -> str:
         return "/".join((*self.path,))
 
-    def add_path_param(self, value: Any):
+    def path_param(self, value: Any):
         self.path = (*self.path, str(value))
         return self
 
@@ -31,7 +31,7 @@ class Resource:
             raw: bool = True,
     ):
         if _id:
-            self.add_path_param(_id)
+            self.path_param(_id)
         response = self._request("get", params=params, headers=headers)
         if raw:
             return response

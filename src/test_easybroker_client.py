@@ -204,15 +204,15 @@ def test_agencies_resource_with_header_parameters_and_get_error(client):
 
 
 def test_properties_from_integration_partners(client):
-    request = client.partners.properties.add_path_param('{property_id}')
+    request = client.partners.properties.path_param('{property_id}')
     assert request.url == "https://api.stagingeb.com/v1/integration_partners/properties/{property_id}"
 
 
 def test_property_from_integration_partners(client):
-    request = client.partners.properties.add_path_param('{property_id}').property_integration
+    request = client.partners.properties.path_param('{property_id}').property_integration
     assert request.url == "https://api.stagingeb.com/v1/integration_partners/properties/{property_id}/property_integration"
 
 
 def test_property_from_integration_partners_with_a_fake_id(client):
-    request = client.partners.properties.add_path_param(42).property_integration
+    request = client.partners.properties.path_param(42).property_integration
     assert request.url == "https://api.stagingeb.com/v1/integration_partners/properties/42/property_integration"
