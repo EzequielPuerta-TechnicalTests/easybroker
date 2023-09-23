@@ -90,4 +90,6 @@ But, good news... Jupyter Notebooks can autocomplete methods after instantiate a
 
 ![Jupyter Notebooks](./misc/autocomplete.gif)
 
+It's because the `__dir__` attribute is populated with the dynamic methods in runtime, at instance creation, and Notebooks uses this to improve its autocompletition...
+
 > Enjoy!
