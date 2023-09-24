@@ -11,6 +11,7 @@ if __name__ == '__main__':
     try:
         page = 1
         limit = 50
+        properties = []
 
         while page == 1 or len(properties) == limit:
             properties = client.properties.all(params={
